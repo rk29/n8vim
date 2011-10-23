@@ -1,5 +1,7 @@
 CFLAGS = -Wall -Werror
 
+TARGETS = passthru monitor adapt
+
 PASSTHRU_OBJS = \
 	SerialPort.o \
 	passthru.o
@@ -12,7 +14,7 @@ ADAPT_OBJS = \
 	SerialPort.o \
 	adapt.o
 
-all : passthru monitor adapt
+all : $(TARGETS)
 
 passthru : $(PASSTHRU_OBJS)
 	$(CXX) -o passthru $(PASSTHRU_OBJS)
@@ -24,7 +26,7 @@ adapt : $(ADAPT_OBJS)
 	$(CXX) -o adapt $(ADAPT_OBJS)
 
 clean :
-	rm -f *.o
+	rm -f $(TARGETS) *.o
 
 dep :
 	gcc -M *.cc > .depend
