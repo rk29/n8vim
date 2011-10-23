@@ -8,9 +8,9 @@
 
 #include "SerialPort.h"
 
-#define DEVICE1 "/dev/ttyS1"
-#define DEVICE2 "/dev/ttyS0"
-#define DEVICE3 "/dev/ttyS2"
+#define DEVICE1 "/dev/ttyS4" // Input
+#define DEVICE2 "/dev/ttyS6" // Full record output
+#define DEVICE3 "/dev/ttyS7" // APRS output
 
 //#define DEBUG
 
@@ -266,7 +266,7 @@ int main(int argc, char **argv)
 			sp3.Write(buffer + 9*4, 4);
 			sp3.Write(buffer + 10*4, 4);
 			sp3.Write(buffer + 11*4, 4);
-			sp3.Write(buffer + 18*4, 4);
+			sp3.Write(buffer + 13*4, 4);
 			sp3.Write(buffer + 16*4, 4);
 			sp3.Write(buffer + 17*4, 4);
 			sp3.Write(buffer + 7*4, 4);
