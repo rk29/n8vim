@@ -266,7 +266,7 @@ int main(int argc, char **argv)
 			sp3.Write(buffer + 9*4, 4);
 			sp3.Write(buffer + 10*4, 4);
 			sp3.Write(buffer + 11*4, 4);
-			sp3.Write(buffer + 13*4, 4);
+			sp3.Write(buffer + 18*4, 4);
 			sp3.Write(buffer + 16*4, 4);
 			sp3.Write(buffer + 17*4, 4);
 			sp3.Write(buffer + 7*4, 4);
