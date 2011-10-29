@@ -9,11 +9,11 @@ int main(void)
 {
     while (1)
     {
-      uint8_t b;
-      if (serial1.get(b))
-      {
-        serial2.put(b);
-      }
+        uint8_t b;
+        if (serial1.get(b))
+        {
+            serial2.put(b);
+        }
     }
 
     return 0;
