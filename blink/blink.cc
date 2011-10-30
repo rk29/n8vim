@@ -1,9 +1,10 @@
 #include <avr/io.h>
 
+volatile int i;
+
 void delay(void)
 {
-    volatile int i;
-    for (i = 0; i < 500000; i++)
+    for (i = 0; i < 1000; i++)
     {
     }
 }
